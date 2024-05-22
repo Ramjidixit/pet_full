@@ -1,0 +1,225 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetsBuy- Sign Up</title>
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <div class="signup-container">
+    <img src="logo.png" alt="PetsBuy" class="logo">
+    <form action="/signup" method="post" class="signup-form" id="signupForm">
+      <h2>Sign Up for PetsBuy</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" >
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" >
+      </div>
+      <button type="submit">Sign Up</button>
+      <a href="/">Go back to login page</a>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get input values
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Perform validation if needed
+
+      // Here you can perform additional validation checks before submitting the form
+
+      // Assuming validation passed, you can proceed with signup
+      alert('Signup successful!'); // Replace with your desired action
+      // Redirect to login page or another page
+      window.location.href = 'login';
+    });
+  </script>
+</body>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+      /* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f0f0;
+    background-image: url("images/background.png");
+    background-size: cover;
+  
+}
+
+/* Centering the card */
+.card {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #e4d2d2;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* Card header styles */
+.card-header {
+    background-color: #d8d9da;
+    color: #2d2b2b;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.card-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Card body styles */
+.card-body {
+    padding: 20px;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #3b7ec7;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="logo"><img src="/images/logo.png" alt="logo"></div>
+    <div class="card">
+        <div class="card-header">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="card-body">
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" placeholder="Enter your password">
+                </div>
+                <button type="submit">Sign Up</button>
+            </form><br>
+
+            {{#if errorMessage}}
+                <script>alert("{{ errorMessage }}");</script>
+            {{/if}}
+           
+
+          
+            <a href="/">Go back to login page</a>
+        </div>
+    </div>
+
+     <script>
+
+      function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if (name === "" || email === "" || password === "") {
+        alert("Please fill in all fields.");
+    } else {
+        document.getElementById("signup-form").submit();
+    }
+}
+
+     </script>
+</body>
+</html>

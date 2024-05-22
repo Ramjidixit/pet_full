@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PetsBuy</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header>
+	<img src="/images/logo.png" alt="PetsBuy" class="logo">
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()"></div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Pets</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+            {{!-- <a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="transparent-button"><i class="fas fa-power-off"></i></button>
+                    </form>
+              </a> --}}
+        </div>
+
+         <a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="transparent-button"><i class="fas fa-power-off"></i></button>
+                    </form>
+              </a>
+
+    </nav>
+    <img src="/images/pets.png" id="pets">
+
+
+    <div class="htext">
+        <h1>Best companion<span> pets </span></h1>
+        <h2>At very admissible Prices</h2>
+        <br>
+        <a href="pets">Check Now</a>
+      </div>
+    </div>
+</header>
+
+{{!-- <div class="container">
+  <div class="image">
+    <img src="/images/pet_image.png" alt="Pet Image">
+  </div>
+  <div class="ptext">
+    <h1>Welcome to our pet adoption platform!</h1>
+    <p class="paragraph">Every pet finds its perfect match here. Browse through our diverse selection of furry friends waiting for loving homes.
+       From playful pups to cuddly kittens, we have a companion for every lifestyle. Join our community of animal lovers today 
+       and make a difference in a pet's life. Together, let's create forever homes filled with wagging tails and purrs of happiness.</p>
+  </div><br><br>
+</div> --}}
+
+
+<section class="section__container">
+    <div class="explore__header">
+      <h2 class="section__header">EXPLORE OUR PAGE</h2>
+      <div class="explore__nav">
+        <span><i class="ri-arrow-left-line"></i></span>
+        <span><i class="ri-arrow-right-line"></i></span>
+      </div>
+    </div>
+    <div class="explore__grid">
+      <div class="explore__card">
+        <span><i class="ri-boxing-fill"></i></span>
+        <h4>Visit</h4>
+        <p>
+          Start by browsing through the available pets. Look at their pictures
+          and read their descriptions to see if any catch your eye.
+        </p>
+        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
+      </div> 
+      
+      <div class="explore__card">
+        <span><i class="ri-heart-pulse-fill"></i></span>
+        <h4>Choose</h4>
+        <p>
+          Take note of the adoption fees associated with each pet. These 
+          fees often cover vaccinations, spaying/neutering, and other 
+          medical expenses .
+        </p>
+        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card">
+        <span><i class="ri-run-line"></i></span>
+        <h4>Contribute</h4>
+        <p>
+          Learn more about the shelter or rescue organization that is listing the pet. 
+          Look for details about their mission, values, and any additional services they 
+          offer
+        </p>
+        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
+      </div><br><br>
+
+
+
+
+
+
+
+      
+    </div>
+  </section>
+<footer>
+    <div class="contact">
+        <h3>Contact Us</h3>
+        <p>Email: petsbuy@bussiness.com</p>
+        <p>Phone: +91987654321</p>
+        <p>Address: 123 Street, Vrindavan, Mathura</p>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 PetsBuy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
